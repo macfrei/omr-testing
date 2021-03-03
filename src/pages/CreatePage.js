@@ -1,16 +1,26 @@
 import styled from 'styled-components'
 import Button from '../components/Button'
 
-export default function CreatePage() {
+export default function CreatePage({ onCreateWizards }) {
   return (
-    <Form>
+    <Form onSubmit={handleSubmit}>
       <label>
         List your favourite wizards, separated by comma:
-        <input type="text" placeholder="Write here ..." />
+        <input name="namesOfWizards" placeholder="Write here ..." />
       </label>
       <Button>Create!</Button>
     </Form>
   )
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    const form = event.target
+    const input = form.elements.namesOfWizards
+
+    onCreateWizards(input.value.split(',').map((wizard) => wizard.trim()))
+    form.reset()
+    input.focus()
+  }
 }
 
 const Form = styled.form`
