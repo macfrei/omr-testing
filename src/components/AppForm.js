@@ -6,7 +6,10 @@ export default function AppForm({ onCreateWizards }) {
     <Form onSubmit={handleSubmit}>
       <label>
         Favourite Wizards:
-        <input name="namesOfWizards" placeholder="Write here ..." />
+        <input
+          name="namesOfWizards"
+          placeholder="Write here separated by comma..."
+        />
       </label>
       <Button>Create!</Button>
     </Form>
@@ -31,8 +34,6 @@ const Form = styled.form`
   label {
     display: grid;
     gap: 20px;
-  }
-
-  input {
+    width: 100%;
   }
 `
