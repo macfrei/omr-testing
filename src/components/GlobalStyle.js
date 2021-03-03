@@ -10,6 +10,11 @@ body {
   font-size: 112.5%;
   margin: 0 auto;
   max-width: 600px;
+  height: 100vh;
+}
+
+#root{
+    height: 100%;
 }
 
 input,
