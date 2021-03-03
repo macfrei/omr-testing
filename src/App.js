@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage'
 function App() {
   const [wizards, setWizards] = useState([])
   const { push } = useHistory()
+
   return (
     <AppLayout>
       <Switch>
