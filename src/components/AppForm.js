@@ -6,7 +6,7 @@ export default function AppForm({ onCreateWizards }) {
   return (
     <Form onSubmit={handleSubmit}>
       <label>
-        List your favourite wizards, separated by comma:
+        Favourite Wizards:
         <input name="namesOfWizards" placeholder="Write here ..." />
       </label>
       <Button>Create!</Button>
