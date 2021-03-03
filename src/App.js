@@ -1,7 +1,9 @@
+import AppHeader from './components/AppHeader'
+
 function App() {
   return (
     <div>
-      <h1>Hello!</h1>
+      <AppHeader title="Favourite Wizard" />
     </div>
   )
 }
