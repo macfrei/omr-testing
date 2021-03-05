@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+import commaSeparatedToArray from '../lib/commaSeparatedToArray'
 import Button from './Button'
 
 export default function AppForm({ onCreateWizards }) {
@@ -19,7 +20,7 @@ export default function AppForm({ onCreateWizards }) {
     const form = event.target
     const input = form.elements.namesOfWizards
 
-    onCreateWizards(input.value.split(',').map((wizard) => wizard.trim()))
+    onCreateWizards(commaSeparatedToArray(input.value))
     form.reset()
     input.focus()
   }
